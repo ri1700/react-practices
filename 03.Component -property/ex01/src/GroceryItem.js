@@ -3,10 +3,10 @@ import React from 'react';
 function GroceryItem({name, count}) {
     return (
         <li>
-            <strong>Bread</strong>
-            <span>10</span>
+            <strong>{name}</strong>
+            <span>{count}</span>
         </li>
     );
 }
 
-export default Groceryitem;
+export default GroceryItem;
