@@ -1,12 +1,12 @@
-#### 함수 컴포넌트
-3. 함수 컴포넌트 작성하기
+#### Pure React(React API) 컴포넌트
+1. React API로 작성된 컴포넌트 만들어 보기
 
 
 #### 실습
 1. Init Project
 
-    $ mkdir ex03
-    $ cd ex03
+    $ mkdir ex04
+    $ cd ex04
     $ npm init -y 
 
 2. Install Packages
@@ -37,27 +37,16 @@
     public/index.html
 
 6. Application
-   
-   1) [참고] VSCode(Reactjs Code Snippets Extension) shortcut
-
-       - rsc : 화살표 함수형 컴포넌트 생성
-       - rsf : 함수형 컴포넌트 생성 (자주 사용)
-       - rcc : 클래스 컴포넌트 생성
-       - rcjc : import와 export 없이 클래스 컴포넌트 생성
-       - rwwd : import 없이 클래스 컴포넌트 생성
-       - rrc : 클래스 컴포넌트와 react-redux 리덕스를 연결하여 생성
-
-   2) Components
     
-       - src/index.js
-       - src/App.js
-       - src/Contents.js
-       - src/Header.js
+    1) src/index.js
+    2) src/App.js
+    3) src/Contents.js
+    4) src/Header.js
    
-7. Test
+1. Test
 
     $ npm start
 
-8. Build(Bundling)
+2. Build(Bundling)
 
     $ npm run build
