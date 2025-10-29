@@ -1,4 +1,4 @@
-import React, {Component, useRef} from 'react';
+import React, {Component} from 'react';
 import './assets/scss/App.scss';
 
 export default class App extends Component {
@@ -7,20 +7,21 @@ export default class App extends Component {
     }
     
     render() {
-        const _this = this;
         return (
             <div
                 className={'App'}
-                
                 ref = {(ref) => {
-                    this.outherRef = ref;
-                }}>
-                onScroll = {() =>{
-                    console.log(this.outherRef.scrollTop, this.outherRef.clientHeight, this.innerRef.clientHeight);
-                    
+                    this.outerRef = ref;
                 }}
+                onScroll = {() => {
+                    console.log(this.outerRef.scrollTop, this.outerRef.clientHeight, this.innerRef.clientHeight);
+                    if(this.innerRef.clientHeight === this.outerRef.scrollTop +  this.outerRef.clientHeight) {
+                        console.log('call api');
+                    }
+                }}>
+
                 <div
-                    ref={function(ref) {
+                    ref={(ref) => {
                         this.innerRef = ref;
                     }}>
                     <ul>
@@ -32,7 +33,7 @@ export default class App extends Component {
                         )}
                     </ul>
                 </div>
-                
+
             </div>
         );
     }
