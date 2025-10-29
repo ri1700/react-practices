@@ -5,7 +5,7 @@ export default function Form() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [validEmail, setValidEmail] = useState(false);
-    const [birthYear, setBirthYear] = useState('');
+    const [agreeProvChecked, setAgreeProvChecked] = useState(false);
  
     return (
         <form 
@@ -85,7 +85,16 @@ export default function Form() {
 
             <fieldset>
                 <legend>약관동의</legend>
-                <input id="agree-prov" type="checkbox" name="agreeProv" value= { "yes" } defaultChecked={ false } />
+                <input 
+                id="agree-prov" 
+                type="checkbox" 
+                name="agreeProv" 
+                value= { "yes" } 
+                checked = {agreeProvChecked} 
+                onChange={(e) => {
+                    setAgreeProvChecked(!agreeProvChecked);
+                }}
+                />
                 <label>서비스 약관에 동의합니다.</label>
             </fieldset>
 
