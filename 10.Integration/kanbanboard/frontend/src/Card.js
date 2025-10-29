@@ -6,7 +6,7 @@ const Card = ({title, description, tasks}) => {
     return (
         <div className={_Card}>
             <div
-                className={[Card_Title, Card_Title_Open].join(' ')}>
+                className={[Card_Title, Card_Title_Open].join('')}>
                 {title}
             </div>
             <div>
