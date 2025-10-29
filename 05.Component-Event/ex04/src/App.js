@@ -8,7 +8,7 @@ export default function App() {
     const onMouseMove = (e) => {
         console.log('mouseover', 'x=${e.clientX}, y=${e.clientY}')
     }
-
+    
     return (
         <>
             <h2>ex03 - Some Examples of Event Handler</h2>
