@@ -1,16 +1,30 @@
-import React from 'react';
-import styled from 'styled-components';
-import TabBox from './TabBox';
+import React, {useState} from 'react';
+import RegisterForm from './RegisterForm';
+import SearchBar from './SearchBar';
+import Emaillist from './Emaillist';
+import './assets/scss/App.scss';
 
-const StyledDiv = styled.div`
-    width: 100%;
-`;
+import data from './assets/json/data.js';
 
-function App () {
+function App() {
+    const [emails, setEmails] = useState(data);
+
+    const searchEmail = function(keyword) {
+        const keywordLowerCase = keyword.toLowerCase();
+
+        setEmails(!keywordLowerCase ? data : data.filter(({firstName, lastName, email}) => {
+            return firstName.toLowerCase().indexOf(keywordLowerCase) !== -1 ||
+                    lastName.toLowerCase().indexOf(keywordLowerCase) !== -1 ||
+                    email.toLowerCase().indexOf(keywordLowerCase) !== -1;
+        }));
+    }
+
     return (
-        <StyledDiv id={'App'}>
-            <TabBox />    
-        </StyledDiv>
+        <div id={'App'}>
+            <RegisterForm />
+            <SearchBar searchEmail={searchEmail}/>
+            <Emaillist emails={data} />
+        </div>
     );
 }
 
