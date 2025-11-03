@@ -2,14 +2,14 @@ import React from 'react';
 import Header from "../layout/Header";
 import Navigation from "../layout/Navigation";
 import Footer from "../layout/Footer";
-import styles from '../assets/scss/component/About.scss';
+import * as styles from '../assets/scss/component/About.scss';
 
 export default function About() {
     return (
         <>
             <Header/>
             <div className={styles.About}>
-                <h2>Hazard 입니다.</h2>
+                <h2>kickscar 입니다.</h2>
             </div>
             <Navigation/>
             <Footer/>

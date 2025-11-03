@@ -6,8 +6,8 @@ export default function Main() {
         <div>
             <h1>Main</h1>
             <ul>
-                <li><Link className={'/'}>[Main]</Link></li>
-                <li><NavLink className={'/guestbook'}>[Guestbook]</NavLink></li>
+                <li><Link className={'menu'} to={'/'}>[Main]</Link></li>
+                <li><NavLink className={'menu'} to={'/guestbook'}>[Guestbook]</NavLink></li>
                 <li><NavLink to={'/gallery'}>[Gallery]</NavLink></li>
             </ul>
         </div>
