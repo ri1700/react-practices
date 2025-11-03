@@ -1,5 +1,5 @@
 import React from 'react';
-import SiteLayout from '../layout/SiteLayout';
+import { SiteLayout } from '../layout';
 import * as styles from '../assets/scss/component/Error404.scss'
 
 function Error404(props) {

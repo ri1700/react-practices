@@ -3,8 +3,8 @@ import * as styles from '../assets/scss/component/Main.scss';
 
 export default function Main() {
     return (
-            <div className={styles.Main}>
-                <h2>Main</h2>
-            </div>
+        <div className={styles.Main}>
+            <h2>Main</h2>
+        </div>
     );
 }

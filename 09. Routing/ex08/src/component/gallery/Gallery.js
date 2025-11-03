@@ -1,13 +1,11 @@
 import React from 'react';
-import SiteLayout from '../../layout/SiteLayout';
-import * as styles from '../assets/scss/component/Gallery.scss';
+import * as styles from '../../assets/scss/component/gallery/Gallery.scss';
+import Header from './Header';
 
 export default function Gallery() {
     return (
-        <SiteLayout>
-            <div className={styles.Gallery}>
-                <h2>Gallery</h2>
-            </div>
-        </SiteLayout>
+        <div className={styles.Gallery}>
+            <Header />
+        </div>
     );
 }

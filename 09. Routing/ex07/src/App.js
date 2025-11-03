@@ -13,7 +13,7 @@ export default function App() {
         {path: '/gallery', element: <Gallery />},
         {path: '/guestbook', element: <Guestbook />},
         {path: '/about', element: <About />},
-        {path: '*', element: <Error404 />},
+        {path: '*', element: <Error404 />}
     ]);
 
     /*
