@@ -60,7 +60,7 @@ export default function App() {
             <div>Browser Route 직접 만들어 보기</div>
             <ul>
                 <li><a href='/' onClick={clickHandler}>main</a></li>
-                <li><a href='/guestbook' onClick={clickHandler}>guestbnook</a></li>
+                <li><a href='/guestbook' onClick={clickHandler}>guestbook</a></li>
                 <li><a href='/gallery' onClick={clickHandler}>gallery</a></li>
             </ul>
             <Router />
